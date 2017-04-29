@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="VirtuBox">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Custom Netdata Dashboard by VirtuBox</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+    <script>var netdataNoBootstrap = true;</script>
+    <script type="text/javascript" src="https://instance.mastodon.top/dashboard.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar-collapse collapse inverse" id="navbar-header">
+      <div class="container-fluid">
+        <div class="about">
+          <h4>About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="social">
+          <h4>Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Follow on Twitter</a></li>
+            <li><a href="#">Like on Facebook</a></li>
+            <li><a href="#">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-static-top navbar-dark bg-inverse">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <a href="https://virtubox.net/netdata" class="navbar-brand">Monitoring</a>
+      </div>
+    </div>
+
+
+
+    <div class="album text-muted">
+      <div class="container">
+        <table class="table table-striped">
+          <thead class="thead-inverse">
+          <tr>
+            <th>Server</th>
+            <th>CPU</th>
+            <th>RAM</th>
+            <th>DISK</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">instance mastodon.top</th>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
+          </tr>
+          <tr>
+            <th scope="row">srv2</th>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
+          </tr>
+          <tr>
+            <th scope="row">srv3</th>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
+            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
+          </tr>
+          
+         
+          </tbody>
+        </table>
+        <div class="row">
+          <div class="card">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <div data-netdata="system.cpu" data-title="srv1"  data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
+
+
+            </div>
+
+          </div>
+
+
+
+          <div class="card">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <div data-netdata="system.cpu" data-host="https://instance.mastodon.top" data-title="srv2" data-dimensions="user" 	data-dygraph-valuerange="[0, 100]" data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
+
+
+
+            </div>
+          </div>
+          <div class="card">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <div data-netdata="system.cpu" data-host="https://instance.mastodon.top" data-title="srv3" data-dimensions="user" 	data-dygraph-valuerange="[0, 100]" data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
+
+
+            </div>
+
+          </div>
+
+          
+          
+          
+          
+
+
+
+        </div>
+         </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-xs-right">
+          <a href="#">Back to top</a>
+        </p>
+
+        <p>Built with  <a href="https://v4-alpha.getbootstrap.com">Bootstrap</a> by <a href="https://virtubox.net">VirtuBox</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script>
+      var RELOAD_EVERY = 5;
+      setTimeout(function(){
+        location.reload();
+      }, RELOAD_EVERY * 60 * 1000);
+    </script>
+
+  </body>
+</html>
