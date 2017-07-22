@@ -15,9 +15,9 @@
    
 
     <!-- Custom styles for this template -->
-    <link href="css/album.css" rel="stylesheet">
+    <link href="album.css" rel="stylesheet">
     <script>var netdataNoBootstrap = true;</script>
-    <script type="text/javascript" src="https://instance.mastodon.top/dashboard.js"></script>
+    <script type="text/javascript" src="https://status.virtubox.net/netdata/dashboard.js"></script>
   </head>
 
   <body>
@@ -56,26 +56,17 @@
             <th>CPU</th>
             <th>RAM</th>
             <th>DISK</th>
+			 <th>Nginx</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <th scope="row">instance mastodon.top</th>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
-          </tr>
-          <tr>
-            <th scope="row">srv2</th>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
-          </tr>
-          <tr>
-            <th scope="row">srv3</th>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
-            <td><img src="https://instance.mastodon.top/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
+            <th scope="row">serveur 1</th>
+            <td><img src="https://status.virtubox.net/netdata/api/v1/badge.svg?chart=system.cpu&amp;alarm=10min_cpu_usage&amp;refresh=auto"></td>
+            <td><img src="https://status.virtubox.net/netdata/api/v1/badge.svg?chart=system.ram&amp;alarm=ram_in_use&amp;refresh=auto"></td>
+            <td><img src="https://status.virtubox.net/netdata/api/v1/badge.svg?chart=disk_util.sda&amp;alarm=10min_disk_utilization&amp;refresh=auto"></td>
+			<td><img src="https://status.virtubox.net/netdata/api/v1/badge.svg?chart=nginx_local.connections&amp;refresh=auto"></td>
+
           </tr>
           
          
@@ -84,7 +75,7 @@
         <div class="row">
           <div class="card">
             <div class="col-xs-6 col-sm-3 placeholder">
-              <div data-netdata="system.cpu" data-title="srv1"  data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
+              <div data-netdata="system.cpu" data-title="cpu"  data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
 
 
             </div>
@@ -95,15 +86,13 @@
 
           <div class="card">
             <div class="col-xs-6 col-sm-3 placeholder">
-              <div data-netdata="system.cpu" data-host="https://instance.mastodon.top" data-title="srv2" data-dimensions="user" 	data-dygraph-valuerange="[0, 100]" data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
-
-
-
-            </div>
-          </div>
+              <div data-netdata="nginx_local.connections" data-title="connections nginx" data-height="270" data-width="340" data-dimensions="" data-chart-library="gauge" data-gauge-adjust="width" data-before="0" data-after="-480" data-points="CHART_DURATION" data-colors="#0099C6"></div>
+ </div>
+         </div>
           <div class="card">
             <div class="col-xs-6 col-sm-3 placeholder">
-              <div data-netdata="system.cpu" data-host="https://instance.mastodon.top" data-title="srv3" data-dimensions="user" 	data-dygraph-valuerange="[0, 100]" data-chart-library="gauge"  data-width="340" data-points="60"  data-after="-60" data-height="270"></div>
+              <div data-netdata="disk_util.sda" data-title="utilization disk io" data-height="270" data-width="340" data-dimensions="" data-chart-library="gauge" data-gauge-adjust="width" data-before="0" data-after="-480" data-points="CHART_DURATION" data-colors="#0099C6"></div>
+
 
 
             </div>
@@ -117,7 +106,7 @@
 
 
 
-        </div>
+       
          </div>
     </div>
 
